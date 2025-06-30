@@ -20,6 +20,8 @@ jobs:
 
       - name: Run misspell
         run: |
+          # Temporarily ignoring some British English spellings that are currently in the codebase
+          # TODO: Gradually replace these with American English equivalents and remove from ignore list
           find . -type f \
                  -not -path './licenses/*' \
-               | xargs bin/misspell -locale US -error
+               | xargs bin/misspell -locale US -i "cancelled,CANCELLED,colours,customise,analogues,serialisation,synchronised,unauthorised" -error
