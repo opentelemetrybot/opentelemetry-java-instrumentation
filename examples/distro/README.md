@@ -26,9 +26,9 @@ This repository has four main submodules:
 - [DemoSpanExporter](custom/src/main/java/com/example/javaagent/DemoSpanExporter.java) - custom `SpanExporter`
 - [DemoServlet3InstrumentationModule](instrumentation/servlet-3/src/main/java/com/example/javaagent/instrumentation/DemoServlet3InstrumentationModule.java) - additional instrumentation
 
-## Instrumentation customisation
+## Instrumentation customization
 
-There are several options to override or customise instrumentation provided by the upstream agent.
+There are several options to override or customize instrumentation provided by the upstream agent.
 The following description follows one specific use-case:
 
 > Instrumentation X from Otel distribution creates span that I don't like and I want to change it in my vendor distro.

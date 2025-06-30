@@ -22,4 +22,4 @@ jobs:
         run: |
           find . -type f \
                  -not -path './licenses/*' \
-               | xargs bin/misspell -error
+               | xargs bin/misspell -locale US -error

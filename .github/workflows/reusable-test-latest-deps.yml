@@ -79,12 +79,12 @@ jobs:
           ${{ inputs.no-build-cache && ' --no-build-cache' || '' }}
 
       - name: Build scan
-        if: ${{ !cancelled() && hashFiles('build-scan.txt') != '' }}
+        if: ${{ !canceled() && hashFiles('build-scan.txt') != '' }}
         run: cat build-scan.txt
 
       - name: Get current job url
         id: jobs
-        if: ${{ !cancelled() }}
+        if: ${{ !canceled() }}
         uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
         env:
           matrix: ${{ toJson(matrix) }}
@@ -102,7 +102,7 @@ jobs:
             return workflow_run.jobs.find((job) => job.name === job_name).html_url;
 
       - name: Flaky test report
-        if: ${{ !cancelled() }}
+        if: ${{ !canceled() }}
         env:
           FLAKY_TEST_REPORTER_ACCESS_KEY: ${{ secrets.FLAKY_TEST_REPORTER_ACCESS_KEY }}
           JOB_URL: ${{ steps.jobs.outputs.result }}

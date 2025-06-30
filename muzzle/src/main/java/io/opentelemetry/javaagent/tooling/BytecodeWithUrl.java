@@ -42,7 +42,7 @@ public abstract class BytecodeWithUrl {
    * bytecode, so that {@link #getBytecode()} is guaranteed to not cause any IO. This comes at the
    * cost of a higher heap consumption, as the bytecode is kept in memory.
    *
-   * @return an ClassFileSource implementing the described caching behaviour.
+   * @return an ClassFileSource implementing the described caching behavior.
    */
   public abstract BytecodeWithUrl cached();
 
