@@ -18,7 +18,7 @@ jobs:
   workflow-notification:
     permissions:
       contents: read
-      issues: write
+      issues: write # required for posting issue comments
     needs:
       - graalvm-native-tests
     if: always()

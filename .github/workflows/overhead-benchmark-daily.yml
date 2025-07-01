@@ -57,7 +57,7 @@ jobs:
   workflow-notification:
     permissions:
       contents: read
-      issues: write
+      issues: write # required for posting issue comments
     needs:
       - run-overhead-tests
     if: always()
