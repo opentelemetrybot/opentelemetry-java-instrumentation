@@ -37,8 +37,8 @@ jobs:
         if: steps.unzip-patch.outputs.exists == 'true'
         id: otelbot-token
         with:
-          app-id: 1295839
-          private-key: ${{ secrets.OTELBOT_JAVA_INSTRUMENTATION_PRIVATE_KEY }}
+          app-id: ${{ vars.OTELBOT_APP_ID }}
+          private-key: ${{ secrets.OTELBOT_PRIVATE_KEY }}
 
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         if: steps.unzip-patch.outputs.exists == 'true'
